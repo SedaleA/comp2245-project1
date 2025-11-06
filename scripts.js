@@ -8,12 +8,13 @@ document.addEventListener("DOMContentLoaded", function () {
     e.preventDefault();
 
     const email = emailInput.value.trim();
+    const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
     //check for empty email or invalid format
-    if (email === "") {
+    if (email === "" || !isValidEmail) {
       messageDiv.textContent = "Please enter a valid email address";
       messageDiv.style.color = "red";
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    } else {
       messageDiv.textContent = `Thank you! Your email address ${email} has been added to our mailing list!`;
       messageDiv.style.color = "green";
     }
