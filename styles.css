@@ -1,6 +1,7 @@
 /* Add your CSS to this file */
 body {
   margin: 0;
+  padding: auto;
   font-size: 16px;
   font-family: system-ui, sans-serif;
   font-size: 16px;
@@ -40,11 +41,20 @@ nav a {
 .testing {
   background-color: #4a5568;
   color: white;
+  padding: 30px;
+}
+
+.stories h2 {
+  color: #5a67d8;
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 
 .newsletter {
   background-color: #48bb78;
   color: white;
+  text-align: center;
+  padding: 40px;
 }
 
 footer {
@@ -75,11 +85,57 @@ nav ul {
 
 .cards {
   display: grid;
-  grid-template-columns: (3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
 }
 
 .card {
   width: 250px;
   box-shadow: 10px 10px 5px lightblue;
   text-align: center;
+}
+
+.cta .btn {
+  background-color: #48bb78;
+  padding: 5px 40px;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.testing .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stories {
+  padding: 30px;
+}
+
+.stories article {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.newsletter .form-group {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.newsletter .btn {
+  background-color: #5a67d8;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 10px;
+}
+
+.newsletter .input[type="email"] {
+  border: none;
+  border-radius: 5px;
+  width: 200px;
+  padding: 10px;
 }
